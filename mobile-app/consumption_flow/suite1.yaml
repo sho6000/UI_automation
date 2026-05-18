@@ -1,0 +1,42 @@
+appId: org.sunbird.app
+---
+- launchApp:
+    clearState: true
+
+- waitForAnimationToEnd
+
+- runFlow:
+    when:
+      notVisible: "Hi User 1"
+    commands:
+      - runFlow: login.yaml
+
+- tapOn: "Home"
+- scrollUntilVisible:
+    element: "Continue Learning"
+
+- copyTextFrom:
+    text: "Course 05-01"
+- evalScript: ${output.course_name = "Course 05-01"}
+
+- copyTextFrom:
+    text: "Completed: 0%"
+- evalScript: ${output.progress = "0%"}
+
+- tapOn: "Continue Learning"
+- waitForAnimationToEnd
+
+- assertVisible: ${output.course_name}
+- assertVisible: ${output.progress}
+
+- scrollUntilVisible:
+    element: "Test Course for 6th January"
+
+- copyTextFrom:
+    text: "Completed: 50%"
+- evalScript: ${output.progress1 = "50%"}
+
+- tapOn: "Course Test Course for 6th January 50% Test Course for 6th January"
+
+- assertVisible: ${output.progress1}
+

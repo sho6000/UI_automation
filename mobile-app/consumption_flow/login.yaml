@@ -1,0 +1,15 @@
+appId: org.sunbird.app
+---
+
+- tapOn: "Profile"
+- tapOn: "Sign in"
+
+- tapOn: "Email ID / Mobile Number"
+- inputText: user1@yopmail.com
+- tapOn: "Password"
+- inputText: User1@123
+
+- back
+
+- tapOn: "Login"                 
+- assertVisible: "Hi User 1"
