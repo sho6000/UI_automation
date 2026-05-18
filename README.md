@@ -94,20 +94,18 @@ test-automation/
 │   ├── tests/                                # Test specifications organized by platform and feature
 │   │   │
 │   │   ├── android/                         # Android-specific tests
-│   │   │   ├── auth/                       # Authentication tests
+│   │   │   ├── anonymous_user_consumption/                       # Authentication tests
 │   │   │   │   ├── login.spec.ts
 │   │   │   │   └── signup.spec.ts
 │   │   │   │
-│   │   │   ├── consumption/                # Consumption flow tests
-│   │   │   │   ├── home.spec.ts
-│   │   │   │   ├── explore.spec.ts
-│   │   │   │   ├── content-player.spec.ts
-│   │   │   │   └── my-learning.spec.ts
-│   │   │   │
-│   │   │   └── profile/                    # Profile tests
-│   │   │       └── profile.spec.ts
+│   │   │   └── consumption/                # Consumption flow tests
+│   │   │       ├── home.spec.ts
+│   │   │       ├── explore.spec.ts
+│   │   │       ├── content-player.spec.ts
+│   │   │       └── my-learning.spec.ts
+│   │   │       
 │   │   │
-│   │   └── ios/                             # iOS-specific tests
+│   │   └── ios/                             # iOS-specific tests (coming soon)
 │   │                                                             
 │   │
 │   ├── app/                                 # Mobile application binaries
