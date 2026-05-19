@@ -4,10 +4,7 @@
 ```txt
 test-automation/
 │
-├── config/                                    # Central configuration for all testing environments
-│   ├── env.config.json                       # Environment URLs (dev, staging, prod) for both web and mobile
-│   ├── test.config.json                      # Test execution settings (timeouts, retries, workers, screenshots)
-│   └── devices.config.json                   # Mobile device configurations (Android/iOS emulators and real devices)
+|
 │
 │
 ├── web-portal/                                # ========== PLAYWRIGHT WEB TESTING ==========
@@ -74,9 +71,11 @@ test-automation/
 │
 ├── mobile-app/                                # ========== APPIUM MOBILE TESTING ==========
 │   │
-│   ├── appium.config.ts                      # Appium configuration (capabilities, server settings)
-│   ├── package.json                          # Mobile project dependencies (Appium, WebdriverIO, etc.)
-│   │
+|   ├── config/                                 # Folder to store all config files
+│   │   ├── package.json                         # wdio relatedfile
+│   │   └── other_files 
+|   |
+|   |  
 │   ├── data/                                 # Test data and credentials for mobile app
 │   │   ├── users.ts                         # User credentials (test users)
 │   │   └── testdata.ts                      # Test data (course names, content IDs)
@@ -91,7 +90,7 @@ test-automation/
 │   │   ├── course.assertions.ts             # Course-specific assertions
 │   │   └── player.assertions.ts             # Player assertions
 │   │
-│   ├── tests/                                # Test specifications organized by platform and feature
+│   ├── specs/                                # Test specifications organized by platform and feature
 │   │   │
 │   │   ├── android/                         # Android-specific tests
 │   │   │   ├── anonymous_user_consumption/                       # Authentication tests
